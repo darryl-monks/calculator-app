@@ -1,0 +1,174 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  color: var(--main-font-colour);
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-colour);
+}
+
+input {
+  width: 100%;
+  padding: 1em;
+  text-align: right;
+  font-family: inherit;
+  font-size: 1.25em;
+  color: var(--main-font-colour);
+  background-color: var(--tertiary-bg-color);
+  outline: none;
+  border: none;
+  border-radius: var(--large-border-radius);
+  cursor: default;
+}
+
+button {
+  padding: 1em;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  border: none;
+  border-radius: var(--small-border-radius);
+}
+
+.outer-container {
+  width: 100%;
+  max-width: 407px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  display: table;
+}
+
+.inner-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+}
+
+.theme__labels {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+}
+
+.theme__labels label {
+  font-size: 0.65em;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.theme__toggle {
+  display: flex;
+  align-items: center;
+}
+
+.theme__toggle__label {
+  margin-right: 1em;
+  position: relative;
+  top: 2px;
+  font-size: 0.65em;
+}
+
+.theme__toggle__radios {
+  display: flex;
+  padding: 4px;
+  border-radius: 16px;
+  font-size: 0;
+  position: relative;
+  background: var(--secondary-bg-colour);
+}
+
+.theme__toggle__radio {
+  display: block;
+  position: relative;
+}
+
+.theme__toggle__radio:not(:last-child) {
+  margin-right: 4px;
+}
+
+.theme__toggle__radio input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.theme__toggle__radio input:checked + span {
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--theme-toggle-bg-colour);
+  border-radius: 100%;
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  column-gap: 1em;
+  row-gap: 1.25em;
+}
+
+.grid--4-col {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid--2-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.calculator__screen {
+  margin-bottom: 1em;
+}
+
+.calculator__buttons {
+  padding: 1.25em;
+  border-radius: var(--large-border-radius);
+  background-color: var(--secondary-bg-colour);
+}
+
+.calculator__button {
+  color: var(--main-key-font-colour);
+  background-color: var(--main-key-bg-colour);
+  box-shadow: 0 var(--small-border-radius) var(--main-key-shadow);
+}
+
+.calculator__button--secondary {
+  color: var(--secondary-key-font-colour);
+  background-color: var(--secondary-key-bg-colour);
+  box-shadow: 0 var(--small-border-radius) var(--secondary-key-shadow);
+}
+
+.calculator__button--tertiary {
+  color: var(--tertiary-key-font-colour);
+  background-color: var(--tertiary-key-bg-colour);
+  box-shadow: 0 var(--small-border-radius) var(--tertiary-key-shadow);
+}

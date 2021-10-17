@@ -1,0 +1,92 @@
+:root {
+  /* Background Colours */
+  --main-bg-colour: hsl(222, 26%, 31%);
+  --secondary-bg-colour: hsl(223, 31%, 20%);
+  --tertiary-bg-color: hsl(224, 36%, 15%);
+
+  /* Font Colours */
+  --main-font-colour: hsl(0, 0%, 100%);
+
+  /* Theme Toggle */
+  --theme-toggle-bg-colour: hsl(6, 63%, 50%);
+
+  /* Key Colours */
+  --main-key-font-colour: hsl(221, 14%, 31%);
+  --main-key-bg-colour: hsl(30, 25%, 89%);
+  --main-key-shadow: hsl(28, 16%, 65%);
+  --secondary-key-font-colour: hsl(0, 0%, 100%);
+  --secondary-key-bg-colour: hsl(225, 21%, 49%);
+  --secondary-key-shadow: hsl(224, 28%, 35%);
+  --tertiary-key-font-colour: hsl(0, 0%, 100%);
+  --tertiary-key-bg-colour: hsl(6, 63%, 50%);
+  --tertiary-key-shadow: hsl(6, 70%, 34%);
+
+  /* Border Radius */
+  --small-border-radius: 4px;
+  --large-border-radius: 8px;
+
+  /* Highlight */
+  --hightlight-colour: hsl(6, 63%, 50%);
+}
+
+[data-theme="light"] {
+  /* Background Colours */
+  --main-bg-colour: hsl(0, 0%, 90%);
+  --secondary-bg-colour: hsl(0, 5%, 81%);
+  --tertiary-bg-color: hsl(0, 0%, 95%);
+
+  /* Font Colours */
+  --main-font-colour: hsl(60, 10%, 19%);
+
+  /* Theme Toggle */
+  --theme-toggle-bg-colour: hsl(25, 98%, 40%);
+
+  /* Key Colours */
+  --main-key-font-colour: hsl(60, 10%, 19%);
+  --main-key-bg-colour: hsl(45, 7%, 89%);
+  --main-key-shadow: hsl(35, 11%, 61%);
+  --secondary-key-font-colour: hsl(0, 0%, 100%);
+  --secondary-key-bg-colour: hsl(185, 42%, 37%);
+  --secondary-key-shadow: hsl(185, 58%, 25%);
+  --tertiary-key-font-colour: hsl(0, 0%, 100%);
+  --tertiary-key-bg-colour: hsl(25, 98%, 40%);
+  --tertiary-key-shadow: hsl(25, 99%, 27%);
+
+  /* Highlight */
+  --hightlight-colour: hsl(25, 98%, 40%);
+}
+
+[data-theme="funky"] {
+  /* Background Colours */
+  --main-bg-colour: hsl(268, 75%, 9%);
+  --secondary-bg-colour: hsl(268, 71%, 12%);
+  --tertiary-bg-color: hsl(268, 71%, 12%);
+
+  /* Font Colours */
+  --main-font-colour: hsl(52, 100%, 62%);
+
+  /* Theme Toggle */
+  --theme-toggle-bg-colour: hsl(176, 100%, 44%);
+
+  /* Key Colours */
+  --main-key-font-colour: hsl(52, 100%, 62%);
+  --main-key-bg-colour: hsl(268, 47%, 21%);
+  --main-key-shadow: hsl(290, 70%, 36%);
+  --secondary-key-font-colour: hsl(0, 0%, 100%);
+  --secondary-key-bg-colour: hsl(281, 89%, 26%);
+  --secondary-key-shadow: hsl(285, 91%, 52%);
+  --tertiary-key-font-colour: hsl(198, 20%, 13%);
+  --tertiary-key-bg-colour: hsl(176, 100%, 44%);
+  --tertiary-key-shadow: hsl(177, 92%, 70%);
+
+  /* Highlight */
+  --hightlight-colour: hsl(176, 100%, 44%);
+}
+
+::selection {
+  background: var(--hightlight-colour); /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: var(--hightlight-colour); /* Gecko Browsers */
+}

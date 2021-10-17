@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/styles/theme.css" />
+    <link rel="stylesheet" href="./src/styles/app.css" />
+    <title>Calculator App</title>
+  </head>
+
+  <body data-theme="default">
+    <div class="outer-container">
+      <div class="inner-container">
+        <header>
+          <h1 class="logo">calc</h1>
+          <div class="theme">
+            <div class="theme__labels">
+              <label for="theme-default">1</label>
+              <label for="theme-light">2</label>
+              <label for="theme-funky">3</label>
+            </div>
+
+            <div class="theme__toggle">
+              <div class="theme__toggle__label">THEME</div>
+              <div class="theme__toggle__radios" id="theme-toggle">
+                <div class="theme__toggle__radio">
+                  <input type="radio" name="theme" id="theme-default" data-theme="default" />
+                  <span>&nbsp;</span>
+                </div>
+                <div class="theme__toggle__radio">
+                  <input type="radio" name="theme" id="theme-light" data-theme="light" />
+                  <span>&nbsp;</span>
+                </div>
+                <div class="theme__toggle__radio">
+                  <input type="radio" name="theme" id="theme-funky" data-theme="funky" />
+                  <span>&nbsp;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="calculator" id="calculator">
+          <div class="calculator__screen">
+            <input class="text-align-right" type="text" name="calculator-screen" id="calculator-screen" value="0" readonly />
+          </div>
+
+          <div class="calculator__buttons grid">
+            <div class="grid grid--4-col">
+              <button class="calculator__button" data-action="number" data-value="7">7</button>
+              <button class="calculator__button" data-action="number" data-value="8">8</button>
+              <button class="calculator__button" data-action="number" data-value="9">9</button>
+              <button class="calculator__button calculator__button--secondary" data-action="delete">DEL</button>
+              <button class="calculator__button" data-action="number" data-value="4">4</button>
+              <button class="calculator__button" data-action="number" data-value="5">5</button>
+              <button class="calculator__button" data-action="number" data-value="6">6</button>
+              <button class="calculator__button" data-action="operator" data-value="+">+</button>
+              <button class="calculator__button" data-action="number" data-value="1">1</button>
+              <button class="calculator__button" data-action="number" data-value="2">2</button>
+              <button class="calculator__button" data-action="number" data-value="3">3</button>
+              <button class="calculator__button" data-action="operator" data-value="-">-</button>
+              <button class="calculator__button" data-action="decimal" data-value=".">.</button>
+              <button class="calculator__button" data-action="number" data-value="0">0</button>
+              <button class="calculator__button" data-action="operator" data-value="/">&divide;</button>
+              <button class="calculator__button" data-action="operator" data-value="x">x</button>
+            </div>
+
+            <div class="grid grid--2-col">
+              <button class="calculator__button calculator__button--secondary" data-action="reset">RESET</button>
+              <button class="calculator__button calculator__button--tertiary" data-action="equals">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/scripts/theme.js" async></script>
+    <script src="./src/scripts/calculator.js" async></script>
+  </body>
+</html>
