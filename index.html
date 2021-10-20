@@ -19,27 +19,14 @@
           <h1 class="logo">calc</h1>
           <div class="theme">
             <div class="theme__labels">
-              <label for="theme-default">1</label>
-              <label for="theme-light">2</label>
-              <label for="theme-funky">3</label>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
             </div>
 
             <div class="theme__toggle">
-              <div class="theme__toggle__label">THEME</div>
-              <div class="theme__toggle__radios" id="theme-toggle">
-                <div class="theme__toggle__radio">
-                  <input type="radio" name="theme" id="theme-default" data-theme="default" />
-                  <span>&nbsp;</span>
-                </div>
-                <div class="theme__toggle__radio">
-                  <input type="radio" name="theme" id="theme-light" data-theme="light" />
-                  <span>&nbsp;</span>
-                </div>
-                <div class="theme__toggle__radio">
-                  <input type="radio" name="theme" id="theme-funky" data-theme="funky" />
-                  <span>&nbsp;</span>
-                </div>
-              </div>
+              <label class="theme__toggle__label" for="theme">THEME</label>
+              <input id="theme" name="theme" class="theme__toggle__slider" type="range" min="0" />
             </div>
           </div>
         </header>

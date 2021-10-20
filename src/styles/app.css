@@ -22,7 +22,7 @@ body {
   background-color: var(--main-bg-colour);
 }
 
-input {
+input[type="text"] {
   width: 100%;
   padding: 1em;
   text-align: right;
@@ -47,7 +47,7 @@ button {
 
 .outer-container {
   width: 100%;
-  max-width: 407px;
+  max-width: 400px;
   height: 100%;
   margin: 0 auto;
   padding: 1em;
@@ -74,10 +74,9 @@ header {
   margin-bottom: 4px;
 }
 
-.theme__labels label {
+.theme__labels span {
   font-size: 0.65em;
-  margin: 0 6px;
-  cursor: pointer;
+  margin: 0 8px;
 }
 
 .theme__toggle {
@@ -92,43 +91,30 @@ header {
   font-size: 0.65em;
 }
 
-.theme__toggle__radios {
-  display: flex;
-  padding: 4px;
-  border-radius: 16px;
-  font-size: 0;
-  position: relative;
+.theme__toggle__slider {
+  appearance: none;
+  width: 64px;
+  height: 24px;
+  padding: 0 4px;
   background: var(--secondary-bg-colour);
+  border-radius: 12px;
+  outline: none;
 }
 
-.theme__toggle__radio {
-  display: block;
-  position: relative;
-}
-
-.theme__toggle__radio:not(:last-child) {
-  margin-right: 4px;
-}
-
-.theme__toggle__radio input {
-  width: 14px;
-  height: 14px;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
+.theme__toggle__slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: var(--theme-toggle-bg-colour);
   cursor: pointer;
 }
 
-.theme__toggle__radio input:checked + span {
-  width: 14px;
-  height: 14px;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+.theme__toggle__slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
   background: var(--theme-toggle-bg-colour);
-  border-radius: 100%;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .grid {

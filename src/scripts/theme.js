@@ -1,24 +1,38 @@
 ((document) => {
-  const themeToggle = document.getElementById("theme-toggle");
-
-  setTheme();
-
-  themeToggle.addEventListener("change", (event) => {
-    const themeName = event.target.dataset.theme;
-    if (themeName) {
-      updateTheme(themeName);
+  class ThemeToggle {
+    constructor(toggleElement, themes) {
+      this.toggleElement = toggleElement;
+      this.themes = themes;
+      this.storageRef = "theme";
+      this.init();
     }
-  });
 
-  function setTheme() {
-    const savedTheme = localStorage.getItem("theme") || "default";
-    document.body.setAttribute("data-theme", savedTheme);
-    document.getElementById(`theme-${savedTheme}`).setAttribute("checked", true);
+    init() {
+      if (Array.isArray(this.themes) && this.toggleElement && this.toggleElement.type === "range") {
+        this._setTheme();
+        this._attachUpdateThemeEventHandler();
+      }
+    }
+
+    _setTheme() {
+      const themeName = localStorage.getItem(this.storageRef) || this.themes[0];
+      this.toggleElement.setAttribute("max", this.themes.length - 1);
+      this._updateTheme(themeName);
+    }
+
+    _updateTheme(themeName) {
+      const themeIndex = this.themes.indexOf(themeName);
+      localStorage.setItem(this.storageRef, themeName);
+      document.body.setAttribute("data-theme", themeName);
+      this.toggleElement.setAttribute("value", themeIndex);
+    }
+
+    _attachUpdateThemeEventHandler() {
+      this.toggleElement.addEventListener("change", (event) => {
+        this._updateTheme(this.themes[event.target.value]);
+      });
+    }
   }
 
-  function updateTheme(themeName) {
-    if (themeName == null) return;
-    document.body.setAttribute("data-theme", themeName);
-    localStorage.setItem("theme", themeName);
-  }
+  new ThemeToggle(document.getElementById("theme"), ["default", "light", "funky"]);
 })(document);
