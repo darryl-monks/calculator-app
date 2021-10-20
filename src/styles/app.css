@@ -92,6 +92,7 @@ header {
 }
 
 .theme__toggle__slider {
+  -webkit-appearance: none;
   appearance: none;
   width: 64px;
   height: 24px;
@@ -102,6 +103,7 @@ header {
 }
 
 .theme__toggle__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
   appearance: none;
   width: 16px;
   height: 16px;
