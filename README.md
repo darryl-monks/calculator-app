@@ -1,3 +1,3 @@
 # Calculator App
 
-React based Calculator app
+JS based Calculator app
